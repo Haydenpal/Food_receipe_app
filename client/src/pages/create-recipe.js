@@ -41,7 +41,7 @@ export const CreateRecipe = () => {
     event.preventDefault();
     try {
       await axios.post(
-        "http://localhost:3001/recipes",
+        "http://52.90.33.19:3001/recipes",
         { ...recipe },
         {
           headers: { Authorization: `Bearer ${cookies.access_token}` },

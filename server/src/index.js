@@ -13,11 +13,14 @@ app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
 mongoose.connect(
-  "mongodb+srv://shaikinthiyaz904:Inthiyaz9293@cluster0.nu1n3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  "mongodb+srv://gajjalaprashanth910:aqw@cluster0.29aky.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    tls: true,
   }
 );
 
-app.listen(3001, () => console.log("Server started"));
+app.listen(3001, '0.0.0.0', () => {
+  console.log('Server started on port 3001');
+});
